@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #e0e7ff 0%, #f3f4f6 30%, #e5e7eb 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 10px;
+}
+
+.container {
+  background: rgba(248, 223, 223, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 700px;
+  padding: 50px 40px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+h1 {
+  font-size: 2.2rem;
+  color: #1a1a2e;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+
+
+/*  Upload Section */
+.upload-section {
+  margin-top: 10px;
+}
+
+.upload-section p {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* ===== File Input ===== */
+input[type="file"] {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 12px;
+  border: 2px dashed #a1b2d9;
+  border-radius: 12px;
+  background-color: #f9fbff;
+  width: 100%;
+  max-width: 360px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+input[type="file"]:hover {
+  border-color: #6a11cb;
+  background-color: #f0f5ff;
+}
+
+button {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(106, 17, 203, 0.25);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  box-shadow: 0 6px 16px rgba(106, 17, 203, 0.35);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== Notes Display Section ===== */
+.notes-display {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.notes-display h2 {
+  font-size: 1.9rem;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ===== Markdown Preview ===== */
+.markdown-preview {
+  background: #f8faff;
+  border: 1px solid #dbe3f0;
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.6;
+  color: #222;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Editable Textarea ===== */
+.editable-textarea {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1rem;
+  resize: none;
+  color: #333;
+  outline: none;
+  background-color: #f9fafb;
+  transition: border 0.3s ease;
+}
+
+.editable-textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.2);
+}
+
+/* ===== Button Group ===== */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #43cea2 0%, #80c0ff 100%);
+}
+
+.quiz-btn {
+  background: linear-gradient(135deg, #fcc1a4 0%, #f78183 100%);
+}
+
+/* ===== Quiz Section ===== */
+.quiz-section {
+  margin-top: 30px;
+  background: #f3a2a2;
+  border: 1px solid #afdfd3;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-section h3 {
+  color: #1a1a2e;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ===== Scrollbar Styling ===== */
+.markdown-preview::-webkit-scrollbar,
+.editable-textarea::-webkit-scrollbar {
+  width: 8px;
+}
+.markdown-preview::-webkit-scrollbar-thumb,
+.editable-textarea::-webkit-scrollbar-thumb {
+  background-color: #b6b8c3;
+  border-radius: 10px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input[type="file"] {
+    max-width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}
+
+
+/* ===== Highlight Important Text ===== */
+.highlight-text strong,
+.highlight-text b {
+  color: blue ;
+  background: rgba(106, 17, 203, 0.08);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+/* ===== Quiz Section Improved ===== */
+.quiz-section {
+  margin-top: 40px;
+  background: #9cb7eb;
+  border: 1px solid #dbe6ff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-card {
+  background: #ffe2e2;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-2px);
+}
+
+.question {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-btn {
+  background: white;
+  color: black;
+  border: 1px solid #cfd9ff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option-btn:hover {
+  background: #e0e7ff;
+}
+
+.option-btn.selected {
+  background: #d0ffff;
+  border-color: #6a11cb;
+}
+
+.option-btn.correct {
+  background: #8df1a5 !important;
+  border-color: green !important;
+  color: #155724;
+  font-weight: 600;
+}
+
+.show-answer-btn {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.show-answer-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+}
+
+.download-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.download-btn:hover {
+  background-color: #45a049;
+}
